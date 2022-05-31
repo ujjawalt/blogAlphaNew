@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'about', to: 'pages#about'
-  resources :articles, only: [:show, :index, :new, :create, :edit, :update]
+  resources :articles
+  # The above line will give all the resources same can be done by following line:
+  # resources :articles, only: [:show, :index, :new, :create, :edit, :update, :destroy]
 end
