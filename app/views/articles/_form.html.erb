@@ -1,5 +1,3 @@
-<h1>Edit Article</h1>
-
 <% if @article.errors.any? %>
     <h2>The errors encountered : </h2>
     <ul>
@@ -26,6 +24,4 @@
         <%= f.submit %>
     </p>
 
-<%end %>
-
-<%= link_to "Cancle & return to all Articles", articles_path %>
+<%end%>
