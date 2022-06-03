@@ -1,13 +1,6 @@
 <h1>Edit Article</h1>
 
-<% if @article.errors.any? %>
-    <h2>The errors encountered : </h2>
-    <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-            <li> <%= msg %> </li>
-        <%end%>
-    </ul>
-<%end %>
+<%= render 'errors' %>
 
 <%= form_with(model: @article, local: true, data: {turbo: false}) do |f| %>
 <%# data: {turbo: false} %>
